@@ -23,7 +23,7 @@
 >
 > TREC-DL 2020 corresponds to real-world scenarios where  the number of training queries with at least one positive label is at least in the tens of thousands, if not hundreds of thousands or more.
 
-### Questions ChatGPT
+### ChatGPT Q&A
 
 > **what is TREC Deep Learning Track**
 >
