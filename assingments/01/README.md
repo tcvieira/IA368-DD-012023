@@ -3,6 +3,7 @@
 ## Prático
 
 > 1. Usar o BM25 implementado pelo pyserini para buscar queries no TREC-DL 2020 - **DONE**
+> 
 > Documentação referencia: https://github.com/castorini/pyserini/blob/master/docs/experiments-msmarco-passage.md
 >
 > 2. Implementar um buscador booleano/bag-of-words. - **WIP**
