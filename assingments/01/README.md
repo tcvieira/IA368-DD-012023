@@ -16,6 +16,8 @@
 
 [![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/01/blob/main/notebook.ipynb)
 
+> **TODO** mentions were added throughout the notebook to indicate some point of lack of understanding or improvements
+
 ## Leitura
 
 [Pretrained Transformers for Text Ranking: BERT and Beyond] (https://arxiv.org/abs/2010.06467)
