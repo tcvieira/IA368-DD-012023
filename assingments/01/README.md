@@ -1,6 +1,6 @@
-# Exercício Semana 1
+# Assigment Week 1
 
-## Prático
+## Code
 
 > 1. Usar o BM25 implementado pelo pyserini para buscar queries no TREC-DL 2020 - **DONE**
 > 
@@ -45,9 +45,9 @@
 >
 > The MSMARCO dataset has become a popular benchmark for evaluating the performance of machine reading comprehension and information retrieval systems, and it has spurred significant research advances in these fields.
 
-## Leitura
+## Reading
 
-[Pretrained Transformers for Text Ranking: BERT and Beyond] (https://arxiv.org/abs/2010.06467)
+[Pretrained Transformers for Text Ranking: BERT and Beyond - Chapter 1] (https://arxiv.org/abs/2010.06467)
 
 [mindmap do artigo](https://mm.tt/map/2632463217?t=Sc3uBhKfwT)
 
