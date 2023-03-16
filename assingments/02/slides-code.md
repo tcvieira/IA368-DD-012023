@@ -25,6 +25,9 @@ style: |
 - aprendando a usar os modelos hugginface
 - ainda com pendências da tarefa anterior que foram acumuladas
 - compartilhamento dos colegas ajuda bastante
+- **TODO**: usar o índice reverso do pyserini "pre-built" que se chama: `msmarco-v1-passage-slim` para a versão tiny do msmarco
+- **TODO:**: usar fix_text do https://ftfy.readthedocs.io/en/latest/ para os caracteres estranhos do corpus
+
 ---
 
 # 3. Uma dúvida "básica" que você ou os colegas possam ter
