@@ -28,6 +28,7 @@ Análise de sentimentos (dataset IMDB) usando um modelo estilo BERT: https://col
 [Pretrained Transformers for Text Ranking: BERT and Beyond - Chapter 3 till section 3.2.2] (https://arxiv.org/abs/2010.06467)
 
 [slides pdf](slides-article.pdf)
+
 [slides markdown](slides-article.md)
 
 ### Questions
