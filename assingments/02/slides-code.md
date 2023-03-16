@@ -21,6 +21,10 @@ style: |
 
 # 2. Problemas e soluções no desenvolvimento
 
+- dificuldade ainda em preparar os dados
+- aprendando a usar os modelos hugginface
+- ainda com pendências da tarefa anterior que foram acumuladas
+- compartilhamento dos colegas ajuda bastante
 ---
 
 # 3. Uma dúvida "básica" que você ou os colegas possam ter
