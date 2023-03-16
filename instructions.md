@@ -1,7 +1,5 @@
 # Instruções
 
-# Apresentações
-
 ## Código/Notebook
 
 A apresentação deve cobrir pelo menos 3 dos 7 itens abaixo:
