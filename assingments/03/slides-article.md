@@ -26,7 +26,7 @@ GPT-3
 ---
 <!-- paginate: true -->
 
-# 1. Questions
+# 1. Questões
 
 1. **Explicação de conceitos importantes do artigo**
 2. **A contribuição do artigo**
@@ -38,54 +38,53 @@ GPT-3
 
 # 2. Explicação de conceitos importantes do artigo
 
-1. **Language models**: A type of machine learning model that is trained on large amounts of text data and can generate coherent and fluent text.
-2. **Zero/One/Few-shot learning**: A type of machine learning in which a model is trained to learn from zero, one and a few number of examples (typically less than 100).
-   1. **zero-shot**: task description + 0 example + prompt
-   2. **one-shot**: task description + 1 example + prompt
-   3. **few-shot**: task description + 1+ example + prompt
-3. **Transfer learning**: A machine learning technique in which a model is trained on a large dataset to learn general patterns, and then fine-tuned on a smaller dataset to learn specific patterns.
+1. **Language models**: um tipo de modelo de aprendizado de máquina que é treinado em grandes quantidades de dados de texto e pode gerar texto coerente e fluente.
+2. **Zero/One/Few-shot learning**: um tipo de aprendizado de máquina em que um modelo é treinado para aprender a partir de zero, um ou poucos exemplos (tipicamente menos de 100).
+   1. **zero-shot**: descrição da tarefa + 0 exemplos + prompt
+   2. **one-shot**: descrição da tarefa + 1 exemplo + prompt
+   3. **few-shot**: descrição da tarefa + 1+ exemplos + prompt
+3. **Transfer learning**:: uma técnica de aprendizado de máquina em que um modelo é treinado em um grande conjunto de dados para aprender padrões gerais e, em seguida, ajustado em um conjunto de dados menor para aprender padrões específicos.
 
 ---
 
 # 3. Contribuição
 
-1. by the time was the largest LLM ever created 175B params (size does matter)
-2. introduced the GPT-3 (Generative Pre-trained Transformer 3) language model, which demonstrated impressive few-shot learning capabilities. GPT-3 was trained on a massive dataset of text and could perform a variety of natural language processing tasks with only a few examples of each task.
+1. Até aquele momento, era o maior LLM já criado com 175B de parâmetros (size matters)
+2. Foi introduzido o modelo de linguagem GPT-3 (Generative Pre-trained Transformer 3), que demonstrou impressionantes capacidades de aprendizado com poucos exemplos. O GPT-3 foi treinado em um conjunto de dados massivo de texto e conseguia executar diversas tarefas de processamento de linguagem natural com apenas alguns exemplos de cada tarefa.
 
 ---
 
 # 3. Resultados interessantes/inesperados
 
-1. The authors found that GPT-3 could perform well on a wide range of language tasks without any task-specific training, including question answering, language translation, and even programming.
-2. GPT and GPT-2 required more task-specific training data to achieve good performance in few-shot learning (size does matter again)
+1. Os autores descobriram que o GPT-3 era capaz de se sair bem em uma ampla variedade de tarefas linguísticas sem nenhum treinamento específico da tarefa, incluindo resposta a perguntas, tradução de idiomas e até mesmo programação.
+2. O GPT e o GPT-2 exigiram mais dados de treinamento específicos da tarefa para alcançar um bom desempenho no aprendizado com poucos exemplos (again size matters).
 
 ---
 
 # 4. Uma dúvida "básica" que você ou os colegas possam ter
 
-1. What is a language model and how does it work?
-2. How Transformer architecture works?
+1. O que é um modelo de linguagem e como ele funciona?
+2. Como funciona a arquitetura Transformer?
 
 ---
 
-# 4.1 What is a language model and how does it work?
+# 4.1 O que é um modelo de linguagem e como ele funciona?
 
-> A language model is a probability distribution over sequences of words in a language. It is a statistical model that assigns a probability to every possible sequence of words in a given language.
-> 
-> The goal of a language model is to predict the probability of a sequence of words given the preceding words in the sequence.
+> Um modelo de linguagem é uma distribuição de probabilidade sobre sequências de palavras em um idioma. É um modelo estatístico que atribui uma probabilidade a todas as possíveis sequências de palavras em um determinado idioma.
 >
-> This is done by learning the conditional probability distribution of each word in the sequence given the previous words.
+> O objetivo de um modelo de linguagem é prever a probabilidade de uma sequência de palavras dada as palavras anteriores na sequência.
+>
+> Isso é feito aprendendo a distribuição de probabilidade condicional de cada palavra na sequência, dadas as palavras anteriores.
 
-We can build a LM with RNN, CNN, LSTM, BERT...
+Podemos criar modelos de linguagem com RNN, CNN, LSTM, BERT...
 
 ---
 
-# 4.2 How Transformer architecture works?
+# 4.2 Como funciona a arquitetura Transformer?
 
+O Transformer é uma arquitetura de aprendizado profundo que foi introduzida em um artigo de 2017 chamado "*Attention Is All You Need*.". Ele tem como objetivo resolver tarefas de *seq2seq* para sequência, lidando com dependências de longo alcance com facilidade.
 
-The Transformer is a deep learning architecture that was introduced in a 2017 paper called "Attention Is All You Need." It aims to solve sequence-to-sequence tasks while handling long-range dependencies with ease.
-
-The Transformer architecture consists of two main components: **Encoder** and **Decoder**
+A arquitetura Transformer consiste em dois componentes principais: **Encoder** and **Decoder**
 
 <!-- ![bg right:50% w:800 h:400 center](transformers.png) -->
 <!-- ![w:800 h:400 center](transformers.png) -->
@@ -95,16 +94,16 @@ The Transformer architecture consists of two main components: **Encoder** and **
 
 # 4.2.1 Encoder (BERT)
 
-> The encoder takes the input sequence of words and generates a sequence of hidden representations that capture the meaning of the input. It consists of several identical layers, each of which performs two operations:
+> O encoder recebe a sequência de entrada de palavras e gera uma sequência de representações ocultas que capturam o significado da entrada. Ele consiste em várias camadas idênticas, cada uma das quais realiza duas operações:
 >
-> - **Self-attention**: This operation allows the model to weigh the importance of each word in the input sequence when generating the hidden representation for each word. Each word is assigned a weight based on how similar it is to the other words in the sequence. This allows the model to focus on the most relevant words for each task.
-> - **Feedforward**: This operation applies a non-linear transformation to each hidden representation to further capture the meaning of the input sequence.
+> - **Self-attention**: Essa operação permite que o modelo pondere a importância de cada palavra na sequência de entrada ao gerar a representação oculta para cada palavra. Cada palavra recebe um peso com base em sua semelhança com as outras palavras na sequência. Isso permite que o modelo se concentre nas palavras mais relevantes para cada tarefa.
+> - **Feedforward**: Essa operação aplica uma transformação não linear a cada representação oculta para capturar ainda mais o significado da sequência de entrada.
 
 ---
 
 # 4.2.2 Decoder (GPT)
 
-> The decoder takes the hidden representations generated by the encoder and generates the output sequence of words. Like the encoder, it consists of several identical layers, each of which performs two operations:
+> O decoder recebe as representações ocultas geradas pelo codificador e gera a sequência de saída de palavras. Assim como o codificador, ele consiste em várias camadas idênticas, cada uma das quais realiza duas operações:
 >
-> - **Masked self-attention**: This operation is similar to self-attention in the encoder, but it's applied in a masked way to prevent the model from looking ahead and cheating by using future words to generate the output.
-> - **Cross-attention**: This operation allows the model to weigh the importance of each hidden representation generated by the encoder when generating the output sequence. It helps the model to align the input and output sequences and generate accurate translations or summaries.
+> - **Masked self-attention**: Essa operação é semelhante à autoatenção no codificador, mas é aplicada de maneira mascarada para impedir que o modelo olhe adiante e trapaceie usando palavras futuras para gerar a saída.
+> - **Cross-attention**: Essa operação permite que o modelo pondere a importância de cada representação oculta gerada pelo codificador ao gerar a sequência de saída. Ajuda o modelo a alinhar as sequências de entrada e saída e gerar traduções ou resumos precisos.
