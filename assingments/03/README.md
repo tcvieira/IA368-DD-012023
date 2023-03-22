@@ -27,6 +27,8 @@ Dicas:
 
 [![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/03/notebook.ipynb)
 
+[notebook](notebook.ipynb)
+
 ## Reading
 
 [Language Models are Few-Shot Learners] (https://arxiv.org/pdf/2005.14165.pdf)
