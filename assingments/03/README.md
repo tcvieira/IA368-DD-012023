@@ -3,6 +3,7 @@
 ## Code
 
 O aluno irá escolher uma tarefa para resolver de maneira zero ou few-shot. Sugestões:
+
 - Classificação de textos (ex: análise de sentimos (IMDB))
 - Predizer se uma passagem/parágrafo é relevante para uma pergunta/query
 - Se uma resposta predita por um sistema de QA ou sumarizador é semanticamente igual à resposta ground-truth
