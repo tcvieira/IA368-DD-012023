@@ -39,11 +39,11 @@ GPT-3
 # 2. Explicação de conceitos importantes do artigo
 
 1. **Language models**: um tipo de modelo de aprendizado de máquina que é treinado em grandes quantidades de dados de texto e pode gerar texto coerente e fluente.
-2. **Zero/One/Few-shot learning**: um tipo de aprendizado de máquina em que um modelo é treinado para aprender a partir de zero, um ou poucos exemplos (tipicamente menos de 100).
+2. **Zero/One/Few-shot learning**: um tipo de aprendizado de máquina em que um modelo é treinado para aprender a partir de zero, um ou poucos exemplos (tipicamente menos de 100). Usado em tempo de inferência.
    1. **zero-shot**: descrição da tarefa + 0 exemplos + prompt
    2. **one-shot**: descrição da tarefa + 1 exemplo + prompt
    3. **few-shot**: descrição da tarefa + 1+ exemplos + prompt
-3. **Transfer learning**:: uma técnica de aprendizado de máquina em que um modelo é treinado em um grande conjunto de dados para aprender padrões gerais e, em seguida, ajustado em um conjunto de dados menor para aprender padrões específicos.
+3. **Transfer learning**:: uma técnica de aprendizado de máquina em que um modelo é treinado em um grande conjunto de dados para aprender padrões gerais e, em seguida, ajustado em um conjunto de dados menor para aprender padrões específicos (**Fine-tunning**). Não usado no GPT-3.
 
 ---
 
@@ -51,6 +51,7 @@ GPT-3
 
 1. Até aquele momento, era o maior LLM já criado com 175B de parâmetros (size matters)
 2. Foi introduzido o modelo de linguagem GPT-3 (Generative Pre-trained Transformer 3), que demonstrou impressionantes capacidades de aprendizado com poucos exemplos. O GPT-3 foi treinado em um conjunto de dados massivo de texto e conseguia executar diversas tarefas de processamento de linguagem natural com apenas alguns exemplos de cada tarefa.
+3. Demonstração da capacidade do modelo em aprender pelo contexto.
 
 ---
 

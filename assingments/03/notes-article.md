@@ -5,6 +5,12 @@
 - by the time was the lagerst LLM ever created 175B params (size does matter)
 - demonstrated that LLM can be use to NLP tasks that it never seen
 - BERT is not a LLM, it's just the encoder half of the entire encoder-decoder transformer architecture
+- consistent definition of zero-shot, one-shot and few-shot learning, i.e. the number of examples provided at inference time (in the prompt), without any inference-time weight updates.
+- GPT3 does not include any bidirectional architecture
+- authors found a bug in removing overlaps between train/test data. But the cost of retraining was prohibitive and they didn't retrain the whole thing because of that!
+- The same model and architecture as GPT-2 is used, with the exception that alternating dense and locally banded sparse attention patterns are used in the layers of the Transformer, similar to the Sparse Transformer.
+- 8 different sizes of model are trained, ranging over three orders of magnitude from 125 million (125M) parameters to 175 billion (175B) parameters, with the last being the model called GPT-3.
+- All models use a context window of nctx=2048 tokens.
 
 ## ChatGPT
 
