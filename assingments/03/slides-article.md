@@ -31,7 +31,7 @@ GPT-3
 1. **Explicação de conceitos importantes do artigo**
 2. **A contribuição do artigo**
 3. **Resultados interessantes/inesperados**
-4. ~~Uma dúvida "básica" que você ou os colegas possam ter~~
+4. **Uma dúvida "básica" que você ou os colegas possam ter**
 5. ~~Um tópico "avançado" para discutirmos~~
 
 ---
@@ -54,21 +54,21 @@ GPT-3
 
 ---
 
-# 3. Resultados interessantes/inesperados
+# 4. Resultados interessantes/inesperados
 
 1. Os autores descobriram que o GPT-3 era capaz de se sair bem em uma ampla variedade de tarefas linguísticas sem nenhum treinamento específico da tarefa, incluindo resposta a perguntas, tradução de idiomas e até mesmo programação.
 2. O GPT e o GPT-2 exigiram mais dados de treinamento específicos da tarefa para alcançar um bom desempenho no aprendizado com poucos exemplos (again size matters).
 
 ---
 
-# 4. Uma dúvida "básica" que você ou os colegas possam ter
+# 5. Uma dúvida "básica" que você ou os colegas possam ter
 
 1. O que é um modelo de linguagem e como ele funciona?
 2. Como funciona a arquitetura Transformer?
 
 ---
 
-# 4.1 O que é um modelo de linguagem e como ele funciona?
+# 5.1 O que é um modelo de linguagem e como ele funciona?
 
 > Um modelo de linguagem é uma distribuição de probabilidade sobre sequências de palavras em um idioma. É um modelo estatístico que atribui uma probabilidade a todas as possíveis sequências de palavras em um determinado idioma.
 >
@@ -80,7 +80,7 @@ Podemos criar modelos de linguagem com RNN, CNN, LSTM, BERT...
 
 ---
 
-# 4.2 Como funciona a arquitetura Transformer?
+# 5.2 Como funciona a arquitetura Transformer?
 
 O Transformer é uma arquitetura de aprendizado profundo que foi introduzida em um artigo de 2017 chamado "*Attention Is All You Need*.". Ele tem como objetivo resolver tarefas de *seq2seq* para sequência, lidando com dependências de longo alcance com facilidade.
 
@@ -92,7 +92,7 @@ A arquitetura Transformer consiste em dois componentes principais: **Encoder** a
 
 ---
 
-# 4.2.1 Encoder (BERT)
+# 5.2.1 Encoder (BERT)
 
 > O encoder recebe a sequência de entrada de palavras e gera uma sequência de representações ocultas que capturam o significado da entrada. Ele consiste em várias camadas idênticas, cada uma das quais realiza duas operações:
 >
@@ -101,7 +101,7 @@ A arquitetura Transformer consiste em dois componentes principais: **Encoder** a
 
 ---
 
-# 4.2.2 Decoder (GPT)
+# 5.2.2 Decoder (GPT)
 
 > O decoder recebe as representações ocultas geradas pelo codificador e gera a sequência de saída de palavras. Assim como o codificador, ele consiste em várias camadas idênticas, cada uma das quais realiza duas operações:
 >
