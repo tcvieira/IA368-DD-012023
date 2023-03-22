@@ -5,3 +5,17 @@
 - by the time was the lagerst LLM ever created 175B params (size does matter)
 - demonstrated that LLM can be use to NLP tasks that it never seen
 - BERT is not a LLM, it's just the encoder half of the entire encoder-decoder transformer architecture
+
+## ChatGPT
+
+**how the fact that bert is the encoder part of the transformer architecture and gpt is the decoder correlate to both been able to build LM?**
+
+> BERT and GPT are both based on the transformer architecture, but they use different parts of the architecture to build language models.
+>
+> BERT is based on the encoder part of the transformer architecture, which is responsible for processing the input sequence and producing a sequence of hidden representations. The final hidden representation of the [CLS] token, which is added to the input at the beginning of the sequence, is used as an input to downstream tasks. In other words, BERT learns a general representation of the input text, which can then be used for a wide range of tasks.
+>
+> GPT, on the other hand, is based on the decoder part of the transformer architecture, which is responsible for generating the output sequence based on the hidden representations produced by the encoder. GPT uses a left-to-right language modeling objective, where the model is trained to predict the next word in a sequence given the previous words.
+>
+> Despite the fact that BERT and GPT use different parts of the transformer architecture, they are both able to build powerful language models. BERT is particularly effective for tasks that require understanding of the entire input sequence, such as question answering and natural language inference. GPT, on the other hand, is particularly effective for tasks that involve generating coherent and fluent text, such as text completion and text generation.
+>
+> Overall, the transformer architecture provides a powerful framework for building language models, and both BERT and GPT demonstrate the effectiveness of this approach. The choice of whether to use the encoder or decoder part of the architecture depends on the specific task and the nature of the input and output sequences.

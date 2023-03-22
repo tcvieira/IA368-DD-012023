@@ -70,7 +70,13 @@ GPT-3
 
 # 4.1 What is a language model and how does it work?
 
-> TODO
+> A language model is a probability distribution over sequences of words in a language. It is a statistical model that assigns a probability to every possible sequence of words in a given language.
+> 
+> The goal of a language model is to predict the probability of a sequence of words given the preceding words in the sequence.
+>
+> This is done by learning the conditional probability distribution of each word in the sequence given the previous words.
+
+We can build a LM with RNN, CNN, LSTM, BERT...
 
 ---
 
