@@ -148,4 +148,4 @@ few-shot
 
 - zero-shot do SetFit não parece zero-shot pela definição do artigo do GPT-3 (mas é usado os embeddings do corpus como se fosse o LM...faz sentido)
 - few-shot no setfit overfit pois só tem 8 amostras para cada label (é possivel fazer otimizar hyperparametros para dataset maiores)
-- como o contexto é guardado em um um diálogo/conversa com gpt? ele guarda toda conversa naquele estilo da api que manda o diálogo, papéis (role) e conteúdo todo?
+- como o contexto é guardado em um um diálogo/conversa com chatgpt? ele guarda toda conversa naquele estilo da api que manda o diálogo, papéis (role) e conteúdo todo?
