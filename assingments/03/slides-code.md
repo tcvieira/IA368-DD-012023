@@ -98,6 +98,8 @@ style: |
 
 [**Sentence Transformers**](https://sbert.net/) SentenceTransformers is a Python framework for state-of-the-art sentence, text and image embeddings - **Based on embeddings, no prompts are required and supports multilingual text classification**
 
+**Constrative Learning** puts similar embeddings together and try to spread apart the differences using loss functions like cosine similarity and others.
+
 **Few-Shot Learning** is the practice of training a machine learning model with a small amount of data.
 
 ---
