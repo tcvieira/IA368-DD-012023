@@ -133,10 +133,10 @@ few-shot
 ## GPT-3.5 OpenAPI
 
 zero-shot
-![w:500 h:180](setfit-zero-shot.png)
+![w:500 h:180]()
 
 few-shot
-![w:500 h:180](setfit-zero-shot.png)
+![w:500 h:180]()
 
 </div>
 
