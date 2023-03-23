@@ -17,9 +17,65 @@ style: |
     section{
         justify-content: flex-start;
     }
+
+    section.title {
+    --title-height: 130px;
+    --subtitle-height: 70px;
+
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr var(--title-height) var(--subtitle-height) 1fr;
+    grid-template-areas: "." "title" "subtitle" ".";
+    }
+
+    section.title h1,
+    section.title h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: var(--area-height);
+    line-height: var(--area-height);
+    font-size: calc(var(--area-height) * 0.28);
+
+    border: 0px dashed gray; /* debug */
+    }
+
+    section.title h1 {
+    grid-area: title;
+    --area-height: var(--title-height);
+    }
+
+    section.title h2 {
+    grid-area: subtitle;
+    --area-height: var(--subtitle-height);
+    }
+
+    section.split {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+        "slideheading slideheading"
+        "leftpanel rightpanel";
+    }
+    /* debug */
+    section.split h3, 
+    section.split .ldiv, 
+    section.split .rdiv { border: 0pt dashed dimgray; }
+    section.split h3 {
+        grid-area: slideheading;
+        font-size: 50px;
+    }
+    section.split .ldiv { grid-area: leftpanel; }
+    section.split .rdiv { grid-area: rightpanel; }
 ---
 
-# Few-Shot with OpenAPI and SetFit on IMDB
+<!-- _class: title -->
+
+# Zero-Shot and Few-Shot with OpenAPI and SetFit on IMDB
+## [![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/03/notebook.ipynb)
 
 ---
 <!-- paginate: true -->
@@ -30,7 +86,7 @@ style: |
 2. ~~Técnicas para garantir que a implementação está correta~~
 3. ~~Truques de código que funcionaram~~
 4. **Problemas e soluções no desenvolvimento**
-5. **Resultados interessantes/inesperados**
+5. ~~Resultados interessantes/inesperados~~
 6. **Uma dúvida "básica" que você ou os colegas possam ter**
 7. ~~Um tópico "avançado" para discutirmos~~
 
@@ -49,3 +105,44 @@ style: |
 # 2.1 SetFit
 
 ![center](setfit.png)
+
+---
+
+# 3. Problemas e soluções no desenvolvimento
+
+- first time using hf datasets
+- discovered about langchain
+- tutorial setFit https://huggingface.co/blog/setfit
+- how to use setFit for zero-shot (notebook do Gustavo Bartz Guedes)
+
+---
+# 4. Resultados
+<!-- _class: split -->
+<div class=ldiv>
+
+## SetFit
+zero-shot
+![w:500 h:180](setfit-zero-shot.png)
+
+few-shot
+![w:500 h:180](setfit-few-shot.png)
+
+</div>
+<div class=rdiv>
+
+## GPT-3.5 OpenAPI
+
+zero-shot
+![w:500 h:180](setfit-zero-shot.png)
+
+few-shot
+![w:500 h:180](setfit-zero-shot.png)
+
+</div>
+
+---
+
+# 4. Uma dúvida "básica" que você ou os colegas possam ter
+
+- zero-shot do SetFit não parece zero-shot pela definição do artigo do GPT-3 (mas é usado os embeddings do corpus como se fosse o LM...faz sentido)
+- few-shot no setfit overfit pois só tem 8 amostras para cada label (é possivel fazer otimizar hyperparametros para dataset maiores)
