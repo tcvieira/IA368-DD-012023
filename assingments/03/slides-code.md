@@ -19,7 +19,7 @@ style: |
     }
 ---
 
-# Few-Shot e Zero-Shot
+# Few-Shot with OpenAPI and SetFit on IMDB
 
 ---
 <!-- paginate: true -->
