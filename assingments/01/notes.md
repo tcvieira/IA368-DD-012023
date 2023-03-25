@@ -11,6 +11,8 @@
 - at least 3 slides for the notebook (choose from the 7 questions)
 - slides for the article (check instructions)
 
+- a MRR score of 0.165 means that on average average the relevant document is found at position 6 (1/0.165).
+
 ## TODO
 
 - review IR pipeline (texts -> inverted index -> retriever -> re-rank -> ranked list)

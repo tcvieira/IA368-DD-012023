@@ -1,6 +1,6 @@
 # Notes from Language Models are Few-Shot Learners
 
-## GPT-3
+## GPT-3 - Language Models are Few-Shot Learners
 
 - by the time was the lagerst LLM ever created 175B params (size does matter)
 - demonstrated that LLM can be use to NLP tasks that it never seen
