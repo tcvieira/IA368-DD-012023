@@ -144,7 +144,7 @@ few-shot
 
 ---
 
-# 4. Uma dúvida "básica" que você ou os colegas possam ter
+# 5. Uma dúvida "básica" que você ou os colegas possam ter
 
 - zero-shot do SetFit não parece zero-shot pela definição do artigo do GPT-3 (mas é usado os embeddings do corpus como se fosse o LM...faz sentido)
 - few-shot no setfit overfit pois só tem 8 amostras para cada label (é possivel fazer otimizar hyperparametros para dataset maiores)
