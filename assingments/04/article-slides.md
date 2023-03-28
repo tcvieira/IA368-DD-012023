@@ -107,14 +107,22 @@ style: |
 
 ---
 
-# 4. Resultados interessantes/inesperados
+# 4. Resultados
 
 1. GPT-2 atinge resultados SOTA para 7 de 8 tarefas em dataset com zero-shot
 2. Consistente melhora das métricas do modelo em diferentes tarefas *zero-shot* em diferentes dataset com o aumento do número de parâmetros/camadas/dimensões;
 3. Pelo gráfico de performance (Figure 4) do artigo, percebe-se que a perplexidade não saturou. Indicando que ao aumentar o modelo a métrica tende a seguir melhorando. (o que foi confirmado com o GPT-3 e GPT-4)
 4. Novamente o **disclaimer** de dados enviesados
 
-> We found no statistically significant difference in gender, race, and religious bias probes between 774M and 1.5B, implying all versions of GPT-2 should be approached with similar levels of caution around use cases that are sensitive to biases around human attributes.
+<!-- ![bg right:50% w:800 h:400 center](transformers.png) -->
+<!-- ![w:800 h:400 center](transformers.png) -->
+![bg right:50% 95%](gpt2-results-zero-shot.png)
+
+
+---
+4.2 Humble LM
+
+![w:800 h:500 center](humble-lm.png)
 
 ---
 
