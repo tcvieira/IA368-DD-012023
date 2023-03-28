@@ -100,7 +100,7 @@ style: |
 
 # 3. Contribuição
 
-1. [WebText](https://github.com/openai/gpt-2/blob/master/domains.txt) dataset: 8 milhões de páginas web, 40GB de dados textuais
+1. [WebText](https://github.com/openai/gpt-2/blob/master/domains.txt) dataset: 8 milhões de páginas web, 40GB de dados textuais. Curadoria ao criar o dataset com os dados do Reddit.
 2. GPT-2 é um GPT aumentado 10X no tamanho dos parâmetros (1.5B) e dataset
 3. Primeiro GPT que testou aplicação com zero-shot para algumas tarefas
 4. Empilhamento de blocos de **decoder** (12-48) aumentando a dimensão dos embeddings (768-1600)
@@ -109,7 +109,7 @@ style: |
 
 # 4. Resultados
 
-1. GPT-2 atinge resultados SOTA para 7 de 8 tarefas em dataset com zero-shot
+1. GPT-2 atinge resultados SOTA para 7 de 8 tarefas em dataset com zero-shot. Tradução e sumarização com "*few-shot*"
 2. Consistente melhora das métricas do modelo em diferentes tarefas *zero-shot* em diferentes dataset com o aumento do número de parâmetros/camadas/dimensões;
 3. Pelo gráfico de performance (Figure 4) do artigo, percebe-se que a perplexidade não saturou. Indicando que ao aumentar o modelo a métrica tende a seguir melhorando. (o que foi confirmado com o GPT-3 e GPT-4)
 4. Novamente o **disclaimer** de dados enviesados
