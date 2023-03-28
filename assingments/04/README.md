@@ -20,8 +20,8 @@ Usar este dataset reduzido do mc4 portugues, com ~300M de tokens: gs://unicamp-d
 
 [Language Models are Unsupervised Multitask Learners] (https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
 
-[slides pdf](slides-article.pdf)
+[slides pdf](article-slides.pdf)
 
-[slides markdown](slides-article.md)
+[slides markdown](article-notes.md)
 
-[notes](notes-article.md)
+[notes](article-notes.md)
