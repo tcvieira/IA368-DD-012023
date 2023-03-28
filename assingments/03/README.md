@@ -33,8 +33,8 @@ Dicas:
 
 [Language Models are Few-Shot Learners] (https://arxiv.org/pdf/2005.14165.pdf)
 
-[slides pdf](slides-article.pdf)
+[slides pdf](article-slides.pdf)
 
-[slides markdown](slides-article.md)
+[slides markdown](article-slides.md)
 
-[notes](notes-article.md)
+[notes](article-notes.md)
