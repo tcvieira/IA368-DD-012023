@@ -2,6 +2,7 @@
 marp: true
 theme: gaia
 _class: lead
+math: mathjax
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 style: |
@@ -95,11 +96,16 @@ style: |
 
 # 2. Conceitos
 
-**Perplexity** is closely related to the cross entropy that is directly minimized during training (intrinsic). Another metrics are **BLEU** and **ROUGE** that are more related to, e.g., classification accuracy (extrinsic). **BLEU** is a precision-like score to evaluate the quality of a translated text. **ROUGE** is a recall-like score to evaluate summarized text.
+A **perplexidade** está intimamente relacionada à entropia cruzada que é diretamente minimizada durante o treinamento (intrínseca). Outras métricas são o **BLEU** e o **ROUGE** que estão mais relacionadas, por exemplo, à precisão da classificação (extrínseca). **BLEU** é uma pontuação semelhante à precisão para avaliar a qualidade de um texto traduzido. **ROUGE** é uma pontuação semelhante ao recall para avaliar o texto resumido.
 
-A high perplexity indicates that a language model is worse at predicting the next word in a sequence, implying greater uncertainty in its predictions. Therefore a lower perplexity indicates better performance in predicting the next word in a sequence, reflecting a more accurate understanding of language patterns and context.
-
+- Uma alta perplexidade indica maior dificuldade do modelo em prever a próxima palavra na sequência.
 - Ou seja, se o seu modelo de linguagem tem perplexidade de N, significa que ele é igual a uma classificador aleatório de N classes
+
+> A perplexidade é apenas a exponenciação da entropia! [artigo](https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3)
+> 
+> <span style="font-size: 18px;">`Entropia é o número médio de bits necessários para codificar a informação contida em uma variável aleatória, portanto, a exponenciação da entropia deve ser a quantidade total de todas as informações possíveis, ou mais precisamente, o número médio ponderado de escolhas que uma variável aleatória possui.</span>
+
+<span style="font-size: 18px;">`Se a sentença média no conjunto de testes pode ser codificada em 100 bits, a perplexidade do modelo é de $2^100$ por sentença.`</span>
 
 ---
 
