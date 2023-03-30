@@ -73,10 +73,9 @@ style: |
 ---
 <!-- _class: title -->
 
-# Language Models are Unsupervised Multitask Learners
+# [GPT-2](https://github.com/openai/gpt-2) - Language Models are Unsupervised Multitask Learners
 
-## [GPT-2](https://github.com/openai/gpt-2)
-
+## Thiago Coelho Vieira
 ---
 <!-- paginate: true -->
 
