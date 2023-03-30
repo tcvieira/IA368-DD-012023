@@ -163,9 +163,41 @@ split train/validation 80/20 (200.000, 50.000)
 
 </center>
 
+--- 
+
+# 4.1 Resultados
+
+[transformer generation config](https://huggingface.co/docs/transformers/main_classes/text_generation#transformers.GenerationConfig)
+
+`max_length=50, do_sample=True`
+
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã, e seu vizinho e o vizinho que comanda o salão de restaurantes com a cachoeira e a borboleta. Na frent</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmão o destacando e os dias de hoje fomei meus olhos de manho que a chuva deu conta de que meu am</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmão de Paulo que, no início dos anos 90, tanto na família do empresário, como na família dos comerci</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmão que desafiu a vida para poder se dedicar ao povo que ele tinha. Ele, por sua vez, foi um grande</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">ilesa do sossego Zey, um pediatra que fez a reativação dos dentes fazendo parte da rotina com as crian</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã do casal que pessoas de coração amada e muito amadora deu àquelas que gostavam de se amare</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">ilegal a mãe de um filho que estava comercialando seus produtos. A mãe da menina sentiu-se aos dentes</span>
+
 ---
 
-# 5. Uma dúvida "básica" que você ou os colegas possam ter
+# 4.2 Resultados
+
+`max_length=50, do_sample=True, num_beams=5, early_stopping=True, no_repeat_ngram_size=2`
+
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">Ângela, na cidade de Santo Antônio de Jesus, no Rio de Janeiro, que se encontrava com a família de um homem</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã de um grupo de amigos que estavam na cidade de Florianópolis, nos Estados Unidos. Eles se encontrav</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã de um grupo de pessoas que trabalhavam como lanchonete. Eles tinham um grande público, que</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">Ângela, no bairro São João, que eu tinha oportunidade de conhecer um pouco mais sobre a histó</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã de um jovem de 19 anos que acabou de morar em um apartamento na cidade de São José dos Campos, no interior de</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã de um jovem de 16 anos que, após a morte de sua mãe, decidiu seguir para a cidade de</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">irmã de um amigo que eu tinha ouvido falar sobre o assunto. Não sabia o que fazer, mas acho que quando</span>
+<span style="font-size: 18px;">Era uma vez na fazenda </span> <span style="font-size: 20px; color: RGB(93,11,113);">Ângela, no bairro de São Bento, que se encontrava com um grupo de moradores que estavam próximos de</span>
+
+
+---
+
+# 5. Questões/Dúvidas para discussão
 
 - concatenação de sentenças para evitar padding e melhorar uso da gpu? discussão do slack
 - não precisaria ajustar o vocab_size da config do modelo para o novo dataset tokenizado?
