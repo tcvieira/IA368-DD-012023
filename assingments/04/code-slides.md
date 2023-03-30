@@ -168,6 +168,7 @@ split train/validation 80/20 (200.000, 50.000)
 |   2   |  2.327500  | 2.269327 |
 
 </center>
+sem overfit (1 epoch somente e muitos dados)
 
 --- 
 
