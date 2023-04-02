@@ -25,14 +25,16 @@
 
 [code slides](code-slides.pdf)
 
+[code notes](code-notes.pdf)
+
 ## Reading
 
 [Document Expansion by Query Prediction](https://arxiv.org/pdf/1904.08375.pdf)
 
 [From doc2query to docTTTTTquery](https://www.researchgate.net/profile/Rodrigo-Nogueira-19/publication/360890853_From_doc2query_to_docTTTTTquery/links/6290b0e98d19206823dfcc55/From-doc2query-to-docTTTTTquery.pdf)
 
-[slides pdf](article-slides.pdf)
+[article slides pdf](article-slides.pdf)
 
-[slides markdown](article-notes.md)
+[article slides markdown](article-notes.md)
 
-[notes](article-notes.md)
+[article notes](article-notes.md)
