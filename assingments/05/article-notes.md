@@ -10,10 +10,16 @@
 
 - add somenthing about Symmetric and asymmetric semantic search - https://github.com/UKPLab/sentence-transformers/tree/master/examples/applications/semantic-search
 
+- alucina gerando queries q n tem nada a ver
+- usam ranking pra saber quais queries sintéticas vão para o índice
+- doc2query com reranqueador para filtrar queries: https://arxiv.org/pdf/2301.03266.pdf
+- recomendado para docs não muito grandes pq a indexação é lenta
+
 ## Article From doc2query to docTTTTTquery
 
 > https://www.researchgate.net/profile/Rodrigo-Nogueira-19/publication/360890853_From_doc2query_to_docTTTTTquery/links/6290b0e98d19206823dfcc55/From-doc2query-to-docTTTTTquery.pdf
 
+- ficou melhor só com as queries do que somente com o texto. Melhor resultado com o doc + queries
 - follows the idea of `Document Expansion by Query Prediction` but using T5-base as a seq2seq expansion model
 - T5 is a full transformer with encoder-decoder structure with a objective train like BERT to predict the next word of a sequence
 - train the model with the MSMARCO passage and ask to generate the question
