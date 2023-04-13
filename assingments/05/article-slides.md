@@ -84,7 +84,7 @@ style: |
 1. **main concepts**
 2. **contributions**
 3. ~~interesting/unexpected results~~
-4. ~~basic doubts~~
+4. **basic doubts**
 5. ~~advanced topics for discussion~~
 
 ---
@@ -114,6 +114,7 @@ style: |
 2. 512 tokens documents and 64 tokens query
 3. improved the results compared with the original doc2query article. T5 (220M) is 4x the original doc2query model size (60M)
 4. low cost for training
+5. better results using only the generated queries than with the document itself. Best result doc + queries
 
 ---
 
@@ -123,6 +124,14 @@ style: |
 2. no major latency time increase in inference time
 3. for the use in IR a couple of new tokens need to be added to BM25 inverted index
 4. introduced a method for neural search using seq2seq models as a offline step before indexing in a IR pipeline
+
+---
+
+# 5. Basic Doubts
+
+1. thess approaches is suitable in what cenarios?
+   1. bigger documents or smaller documents
+   2. as a way to improve indexing time
 
 <!-- # advanced topics for discussion
 
