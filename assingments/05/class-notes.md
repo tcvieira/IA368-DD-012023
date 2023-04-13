@@ -42,6 +42,12 @@
 - **TODO**
   - assistir novamente parte de explicação da tarefa
 
+- **Refs**
+  - Efeito Grokking: https://arxiv.org/pdf/2201.02177.pdf
+  - doc2query com reranqueador para filtrar queries: https://arxiv.org/pdf/2301.03266.pdf
+  - Sumarização também é uma tarefa parecida, tem um script da HF: https://github.com/huggingface/transformers/blob/main/examples/pytorch/summarization/run_summarization.py.  O ponto negativo é que ele abstrai a parte relativa a processamento do dataset.
+  - https://pia368dd2023s1.slack.com/archives/C051QA5D45N/p1680220867852389
+
 ## article
 
 - Document Expansion by Query Prediction. (https://arxiv.org/pdf/1904.08375.pdf)
