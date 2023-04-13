@@ -129,7 +129,7 @@ style: |
 
 # 5. Basic Doubts
 
-1. thess approaches is suitable in what cenarios?
+1. these approaches is suitable in what cenarios?
    1. bigger documents or smaller documents
    2. as a way to improve indexing time
 
