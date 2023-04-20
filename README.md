@@ -2,6 +2,8 @@
 
 Repositório das aulas/tarefas da disciplina IA368-DD Deep Learning aplicado a Sistemas de Buscas 1o. semestre 2023 FEEC UNICAMP
 
+![](llm.gif)
+
 ## Some References
 
 - https://github.com/yandexdataschool/nlp_course
