@@ -80,17 +80,17 @@ style: |
 ---
 <!-- paginate: true -->
 
-# 1. Questions
+<!-- # 1. Questions
 
 1. **main concepts**
 2. **contributions**
 3. **interesting/unexpected results**
 4. ~~basic doubts~~
-5. ~~advanced topics for discussion~~
+5. ~~advanced topics for discussion~~ -->
 
 ---
 
-# 2. Main Concepts
+# 1. Main Concepts
 
 1. **Open Domain QA**: is a task that answers factoid questions using a large collection of documents.
 2. **Passage retrieval**: effectively reduces the search space for answer extraction, but also identifies the support context for users to verify the answer
@@ -100,7 +100,7 @@ style: |
 6. **Reader model**: component to extract the answer from the relevant texts
 ---
 
-# 3 Contribution
+# 2. Contribution
 
 1. **Goal**: `can we train a better dense embedding model using only pairs of questions and passages (or answers), without additional pretraining?`
    1. the goal of the dense passage retriever (DPR) is to index all the passages in a low-dimensional and continuous space.
@@ -109,7 +109,7 @@ style: |
 
 ---
 
-# 3.1 Architecture
+# 2.1 Architecture
 
 1. dual-encoder (bi-encoder) with BERT
    1. encoder 1 = question
@@ -122,7 +122,7 @@ style: |
 
 ---
 
-# 4. interesting/unexpected results
+# 3. interesting/unexpected results
 
 - empirical analysis and ablation studies indicate that more complex model frameworks or similarity functions do not necessarily provide additional values.
 - simply fine-tuning the question and passage encoders on existing question-passage pairs is sufficient to greatly outperform BM25
@@ -134,7 +134,7 @@ style: |
 - **FAISS**: an extremely efficient, open-source library for similarity search and clustering of dense vectors, which can easily be applied to billions of vectors. Used for inference.
 ---
 
-# 5. Results
+# 4. Results
 
 <!-- _class: split -->
 
