@@ -129,7 +129,7 @@ style: |
   - BM25: top passages that don't contain the answer but matches most of the question tokens
   - Gold: positive passages paired with other questions which appear in the training set
 - **in-batch negatives** approach and reuse gold passages fro the same batch as negatives (improve computation efficiency)
-- **FAISS**: an extremely efficient, open-source library for similarity search and clustering of dense vectors, which can easily be applied to billions of vectors. Used to index the passages.
+- **FAISS**: an extremely efficient, open-source library for similarity search and clustering of dense vectors, which can easily be applied to billions of vectors. Used to index the passages before the inference.
 ---
 
 # 4.1 Results
