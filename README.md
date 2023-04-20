@@ -7,5 +7,6 @@ Repositório das aulas/tarefas da disciplina IA368-DD Deep Learning aplicado a S
 ## Some References
 
 - https://github.com/yandexdataschool/nlp_course
+- [Pathways Language Model (PaLM)](https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html)
 - [BERT Document Classification Tutorial with Code](https://www.youtube.com/watch?v=_eSGWNqKeeY)
 - [A Survey of Large Language Models] - https://arxiv.org/pdf/2303.18223.pdf
