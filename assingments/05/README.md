@@ -35,6 +35,6 @@
 
 [article slides pdf](article-slides.pdf)
 
-[article slides markdown](article-notes.md)
+[article slides markdown](article-slides.md)
 
 [article notes](article-notes.md)

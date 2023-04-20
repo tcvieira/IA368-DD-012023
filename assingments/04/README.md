@@ -24,6 +24,6 @@ Usar este dataset reduzido do mc4 portugues, com ~300M de tokens: gs://unicamp-d
 
 [slides pdf](article-slides.pdf)
 
-[slides markdown](article-notes.md)
+[slides markdown](article-slides.md)
 
 [notes](article-notes.md)
