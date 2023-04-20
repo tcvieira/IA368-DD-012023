@@ -98,7 +98,7 @@ style: |
 6. **Reader model**: component to extract the answer from the relevant texts
 ---
 
-# 2. Contribution
+# 2.1 Contribution
 
 1. **Goal**: `can we train a better dense embedding model using only pairs of questions and passages (or answers), without additional pretraining?`
    1. the goal of the dense passage retriever (DPR) is to index all the passages in a low-dimensional and continuous space.
@@ -107,7 +107,7 @@ style: |
 
 ---
 
-# 2.1 Architecture
+# 2.2 Architecture
 
 1. dual-encoder (bi-encoder) with BERT
    1. encoder 1 = question
@@ -124,15 +124,18 @@ style: |
 
 - empirical analysis and ablation studies indicate that more complex model frameworks or similarity functions do not necessarily provide additional values.
 - simply fine-tuning the question and passage encoders on existing question-passage pairs is sufficient to greatly outperform BM25
-- **Strategies**;
-  - ds
+- **Negative Selection Strategies**
+  - Random: random passages from the corpus
+  - BM25: top passages that don't contain the answer but matches most of the question tokens
+  - Gold: positive passages paired with other questions which appear in the training set
+- **in-batch negatives** approach and reuse gold passages fro the same batch as negatives (improve computation efficiency)
 - **Problems**:
   - fine-tunning dense vectors can is expensive in indexing and retrieval
   - may generate suboptimal representations
 - **FAISS**: an extremely efficient, open-source library for similarity search and clustering of dense vectors, which can easily be applied to billions of vectors. Used for inference.
 ---
 
-# 4. Results
+# 4.1 Results
 
 <!-- _class: split -->
 
@@ -140,13 +143,19 @@ style: |
 
 1. Outperforms Lucene-BM25 by 9%-19% absolute top-20
 2. Outperforms BM25 by 65.2% vs. 42.9% in Top-5 accuracy
-3. Stablish SOTA on multiple open domain QA benchmarks on models with the best retriever precision
-4. `In the context of open-domain question answering, a higher retrieval precision indeed translates to a higher end-to-end QA accuracy.`
-5. Demonstrated that dense retrieval can outperform and potentially replace the traditional sparse retrieval component in open-domain question answering. **Still holds?**
 </div>
 <div class=rdiv>
 
-![w:400 h:300 center](article-results.png)
-![w:400 h:300 center](article-results.png)
+![w:500 h:400 center](article-results.png)
 
 </div>
+
+---
+# 4.2 Results
+
+1. Stablish SOTA on multiple open domain QA benchmarks on models with the best retriever precision
+2. `In the context of open-domain question answering, a higher retrieval precision indeed translates to a higher end-to-end QA accuracy.`
+3. Demonstrated that dense retrieval can outperform and potentially replace the traditional sparse retrieval component in open-domain question answering. **Still holds?**
+
+![w:900 h:300 center](article-results2.png)
+
