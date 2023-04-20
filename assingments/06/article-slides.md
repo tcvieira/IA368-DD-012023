@@ -88,8 +88,6 @@ style: |
 4. ~~basic doubts~~
 5. ~~advanced topics for discussion~~ -->
 
----
-
 # 1. Main Concepts
 
 1. **Open Domain QA**: is a task that answers factoid questions using a large collection of documents.
