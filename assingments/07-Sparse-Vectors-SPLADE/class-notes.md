@@ -37,7 +37,7 @@
 ## article
 
 - SPLADE busca esparsa e SPLADE v2
-  - troca oo binarizer do sparterm por uma função ao invés de um PLM (BERT) que naturalmente garante a esparcidade (como?)
+  - troca do binarizer do sparterm por uma função ao invés de um PLM (BERT) que naturalmente garante a esparcidade (como?)
   - SPLADE: Sparse Lexical and Expansion Model
   - a representação esparsa é como um BOsubW "contextualizada" apesar da entrada a ordem dos tokens importarem
   - pq quero ter um vetor esparso?

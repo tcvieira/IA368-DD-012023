@@ -103,49 +103,37 @@ style: |
 
 # 1.2 Main Concepts
 
-1. **(SPL) sparse lexical model**: model represents documents and queries using a sparse vector of weighted terms (TFIDF).
-2. **sparsity constraints**: The SPLADE model introduces sparsity constraints on the document and query vectors to reduce noise and improve computational efficiency.
-3. **query (E)expansion**: The SPLADE model uses an external knowledge source to expand the query with learnable term expansion, adding related terms that may not be present in the original query.
-4. **learning-to-rank**: The SPLADE model uses a learning-to-rank approach to combine the scores from the sparse lexical model and the expanded query model into a final ranking score.
+1. **SparTerm**: it's a Term-based Sparse representations, aiming to improve the representation capacity of bag-of-words(BoW)
+method for semantic-level matching
+2. **(SPL) sparse lexical model**: model represents documents and queries using a sparse vector of weighted terms (TFIDF).
+3. **sparsity constraints**: The SPLADE model introduces sparsity constraints on the document and query vectors to reduce noise and improve computational efficiency.
+4. **query (E)expansion**: The SPLADE model uses an external knowledge source to expand the query with learnable term expansion, adding related terms that may not be present in the original query.
+5. **learning-to-rank**: The SPLADE model uses a learning-to-rank approach to combine the scores from the sparse lexical model and the expanded query model into a final ranking score.
 
 ---
 
 # 2.1 Contribution
 
-1. the SPLADE paper proposes a novel approach for first-stage ranking that combines the strengths of sparse lexical models and query expansion techniques, while addressing some of the limitations of existing methods.
-2. query expansion with BERT works as a way to learn terms that improve the original query more effectively based on their context (overcoming vocab mismatch)
-
+1. SPLADE is a new model that learns BERT-based sparse representations for queries and documents to effectively and efficiently retrieve documents by means of an inverted index.
+2. replace the binarizer from the SparTerm with function that holds sparsity
+3. query expansion with BERT works as a way to learn terms that improve the original query more effectively based on their context (overcoming vocab mismatch)
+4. demonstrate a trade-off on sparsity regularization for performance and efficiency improvement (log saturation + ReLU lead to not importante terms to 0)
+   1. Simply speaking, this regularization will penalize words that are often predicted but which are not really useful for retrieving relevant documents.
+5. on SPLADE v2
+   1. improvement on the pooling mechanism of the MLM ?
+   2. model destillation to improve performance and efficiency contribuited to get SOTA on MSMARCO passage classification task
 
 ---
 
 # 2.2 Architecture
 
-- the architecture allows the use of the outputs from the sparse retriever on different dense rerankers
-
-```mermaid
-
-graph LR
-A[Query] --> B[Sparse Lexical Model]
-B --> D[Document]
-C[External Knowledge Source] --> E[Expanded Query]
-E --> B
-F[Learning-to-Rank] --> G[Final Ranking Score]
-B --> F
-E --> F
-D --> G
-```
+![w:700 h:500 center](splade.png)
+[image source](https://github.com/naver/splade)
 
 ---
 
 # 3. interesting/unexpected results
 
-- 
----
-
-# 4.1 Results
-
----
-# 4.2 Results
-
-1. 
-
+- perfomance comparable to dense SOTA approaches
+- able to compete with state-of-the-art dense models
+- outperforms previous sparse approaches and dense baselines, and is able to compete with state-of-the-art dense models
