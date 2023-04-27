@@ -108,7 +108,24 @@ method for semantic-level matching
 2. **(SPL) sparse lexical model**: model represents documents and queries using a sparse vector of weighted terms (TFIDF).
 3. **sparsity constraints**: The SPLADE model introduces sparsity constraints on the document and query vectors to reduce noise and improve computational efficiency.
 4. **query (E)expansion**: The SPLADE model uses an external knowledge source to expand the query with learnable term expansion, adding related terms that may not be present in the original query.
-5. **learning-to-rank**: The SPLADE model uses a learning-to-rank approach to combine the scores from the sparse lexical model and the expanded query model into a final ranking score.
+
+---
+
+# 1.3 Main Concepts
+
+<!-- _class: split -->
+
+<div class=ldiv>
+
+![w:600 h:350 center](1-stage.png)
+
+<small>[image source](https://www.pinecone.io/learn/splade/)</small>
+</div>
+<div class=rdiv>
+
+![w:500 h:400 center](2-stage.png)
+
+</div>
 
 ---
 
@@ -120,8 +137,8 @@ method for semantic-level matching
 4. demonstrate a trade-off on sparsity regularization for performance and efficiency improvement (log saturation + ReLU lead to not importante terms to 0)
    1. Simply speaking, this regularization will penalize words that are often predicted but which are not really useful for retrieving relevant documents.
 5. on SPLADE v2
-   1. improvement on the pooling mechanism of the MLM ?
-   2. model destillation to improve performance and efficiency contribuited to get SOTA on MSMARCO passage classification task
+   1. max pooling mechanism on weigths provided susbstancial improvement over the SPLADE baseline
+   2. model distillation to improve performance and efficiency contribuited to get SOTA on MSMARCO passage classification task
 
 ---
 
