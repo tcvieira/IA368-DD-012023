@@ -146,6 +146,7 @@ method for semantic-level matching
 5. on SPLADE v2
    1. max pooling mechanism on weigths provided susbstancial improvement over the SPLADE baseline
    2. model distillation to improve performance and efficiency contribuited to get SOTA on MSMARCO passage classification task
+   3. limiting term expansion to the document encodings only
 
 ---
 
