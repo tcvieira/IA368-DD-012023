@@ -2,7 +2,7 @@
 
 ## Code
 
-[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/07/notebook.ipynb)
+[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/07-Sparse-Vectors-SPLADE/notebook.ipynb)
 
 [notebook](notebook.ipynb)
 
