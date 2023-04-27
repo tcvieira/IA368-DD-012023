@@ -129,6 +129,13 @@ method for semantic-level matching
 
 ---
 
+# 1.3 Main Concepts
+
+![w:700 h:500 center](importance-estimation.png)
+<small>[image source](https://www.pinecone.io/learn/splade/)</small>
+
+---
+
 # 2.1 Contribution
 
 1. SPLADE is a new model that learns BERT-based sparse representations for queries and documents to effectively and efficiently retrieve documents by means of an inverted index.
