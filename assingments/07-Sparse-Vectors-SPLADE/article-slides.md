@@ -107,7 +107,7 @@ style: |
 method for semantic-level matching
 2. **(SPL) sparse lexical model**: model represents documents and queries using a sparse vector of weighted terms (TFIDF).
 3. **sparsity constraints**: The SPLADE model introduces sparsity constraints on the document and query vectors to reduce noise and improve computational efficiency.
-4. **query (E)expansion**: The SPLADE model uses an external knowledge source to expand the query with learnable term expansion, adding related terms that may not be present in the original query.
+4. **query (E)expansion**: The SPLADE model uses BERT as a source to expand the query with learnable term expansion, adding related terms that may not be present in the original query.
 
 ---
 
