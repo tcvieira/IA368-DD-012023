@@ -19,7 +19,7 @@ style: |
     }
 
     section.title {
-    --title-height: 100px;
+    --title-height: 80px;
     --subtitle-height: 70px;
 
     overflow: visible;
@@ -90,14 +90,41 @@ style: |
 
 # 1.1 Main Concepts
 
+- Synthetic Data Generation
+- Prompt
+- use few-shot to generate/augmentate new queries from the MSMARCO using a LM
+- generate 100k queries in 100k docs pais $(q,d+)$, select top10k using the same model and than train/fine-tune the reranker
+- from the 100k generated queries, select 10k relevant $top_k$ based on their probabilities
+- BM25 was used to select non-relevant queries. For a given query $q$ retrieve 1000 docs with BM25, then random sample a $d-$ to get a non-relevant pair $(q, d-)$
+
+---
+
+# 1.2 Architecture
+
+- LM $G$ generates a questions $q$ from a set with pairs $[(q_i,d_i)]$ with a relevance probability of $p_q$
+- the top $K$ pairs $(q,d)$ based on $p_q$ are used as `positive` examples to train the reranker
+- the `reranker` is responsible to estimate the relevancy of selected pair $(q,d)$ (relevancy of $d$ to $q$)
+
+![bg right:50% 95%](architecture.png)
+
 ---
 
 # 2.1 Contribution
 
----
-
-# 2.2 Architecture
+- introduced an effective approach to use LLM in IR beside its computation costs
+- use synthetic data (on MSMARCO) generated from LM using few-shot to fine-tuning reranker model
+- use of simple prompt techinque as unsupervised approach (few-shot) to generate queries
+- stablish SOTA with fine-tuning in 2 of 3 evaluated datasets
 
 ---
 
 # 3. interesting/unexpected results
+
+- approach to eval if gtp-3 was trained on supervised IR data
+  - experiment: "measuring the number of questions produced by GPT-3 that match those in the MS MARCO dataset"
+  - got low percentages on generated questions correlation with the ones from the dataset, this there are evidence that the models were not finetuned on MS MARCO, or at least, they did not memorize it
+- gpt-3 model size increase
+  - As the GPT3 model size used to generate synthetic questions were increased, the IR metric keeps increasing, although very slowly.
+  - bigger models brings more complex and spefic questios which helps the reranker
+- on future work
+  - scale up our synthetic datasets to millions of examples (HOW?)
