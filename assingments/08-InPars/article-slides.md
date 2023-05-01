@@ -90,7 +90,7 @@ style: |
 
 # 1.1 Main Concepts
 
-- Synthetic Data Generation
+- Synthetic Data Generation as a way to mitigate the lack of domain specific training data
 - Prompt
 - use few-shot to generate/augmentate new queries from the MSMARCO using a LM
 - generate 100k queries in 100k docs pais $(q,d+)$, select top10k using the same model and than train/fine-tune the reranker
@@ -111,8 +111,9 @@ style: |
 
 # 2.1 Contribution
 
-- introduced an effective approach to use LLM in IR beside its computation costs
-- use synthetic data (on MSMARCO) generated from LM using few-shot to fine-tuning reranker model
+- use synthetic data (on MSMARCO) generated from LM using few-shot to fine-tuning reranker model as way to overcome the lack of data on specific taks
+- adapt the use of LLM in IR beside its computation costs
+- shift the cost of LM from the retrieval stage to generating training data
 - use of simple prompt techinque as unsupervised approach (few-shot) to generate queries
 - stablish SOTA with fine-tuning in 2 of 3 evaluated datasets
 
