@@ -111,10 +111,10 @@ style: |
 
 # 2.1 Contribution
 
-- use synthetic data (on MSMARCO) generated from LM using few-shot to fine-tuning reranker model as way to overcome the lack of data on specific taks
+- use synthetic data (on MSMARCO) generated from LM (v1: paid LLM GPT3-Curie and v2: free GPT-J 6B) using few-shot to fine-tuning reranker model as way to overcome the lack of data on specific taks
 - adapt the use of LLM in IR beside its computation costs
 - shift the cost of LM from the retrieval stage to generating training data
-- use of simple prompt techinque as unsupervised approach (few-shot) to generate queries
+- use of simple prompt techinque as unsupervised approach (few-shot settings) to generate queries
 - stablish SOTA with fine-tuning in 2 of 3 evaluated datasets
 
 ---
