@@ -34,7 +34,7 @@ Nota: Também usar o dataset dos colegas para obter diversidade de exemplos: Ass
 
 ## Refs
 
-- Júlia Tessler - getpass()
+- Júlia Tessler - getpass() https://docs.google.com/presentation/d/1UgHVxaZ2rsSSM62mRvZdCfMfpKT11Ts4RJBOgWB2XKI/edit#slide=id.g23e0cb8d425_0_11
 - chatgpt
   - > you are a prompt engineer. Give some good prompts that instruct chatgpt to generate synthetic queries for documents
     - **ChatGPT** Sure, here are some prompts that can be used to instruct ChatGPT to generate synthetic queries for documents:
