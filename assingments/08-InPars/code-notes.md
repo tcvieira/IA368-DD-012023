@@ -2,7 +2,7 @@
 
 Instruções Exercício - InPars
 
-Objetivo: gerar dataset para treino de modelos de buscas usando a técnica do InPars e avaliar um modelo reranqueador treinado neste dataset no TREC-COVID:
+**Objetivo**: gerar dataset para treino de modelos de buscas usando a técnica do InPars e avaliar um modelo reranqueador treinado neste dataset no TREC-COVID:
 
 **Entrada**: 3-5 exemplos few-shot + documento amostrado da coleção do TREC-COVID
 **Saída**: query que seja relevante para o documento amostrado
@@ -32,6 +32,19 @@ Nota: Também usar o dataset dos colegas para obter diversidade de exemplos: Ass
 > Colocar dataset no formato jsonlines:
 > {"query": query, "positive_doc_id": doc_id, "negative_doc_ids": [opcional]}\n 
 
-**Dicas:**
-
 ## Refs
+
+- Júlia Tessler - getpass()
+- chatgpt
+  - > you are a prompt engineer. Give some good prompts that instruct chatgpt to generate synthetic queries for documents
+    - **ChatGPT** Sure, here are some prompts that can be used to instruct ChatGPT to generate synthetic queries for documents:
+      - "What are some questions someone might have after reading this document?"
+      - "Can you generate queries that would help a user find information related to this document's content?"
+      - "What are some alternative ways to ask for information covered in this document?"
+      - "Can you generate queries that would help a user better understand a particular concept discussed in this document?"
+      - "What are some common search queries that someone might use to find this document?"
+      - "Can you suggest queries that would help a user identify the main points covered in this document?"
+      - "What are some potential queries that would help a user evaluate the credibility of the information in this document?"
+      - "Can you generate queries that would help a user connect this document to other relevant resources on this topic?"
+      - "What are some queries that would help a user find examples or case studies related to the topics discussed in this document?"
+      - "What are some queries that would help a user find additional information on a particular aspect of this document's content?"
