@@ -125,6 +125,6 @@ style: |
 
 ---
 
-# 5. A "basic" doubt that you or your colleagues may have
+# 4. A "basic" doubt that you or your colleagues may have
 
 - is it a good idea to filter documents based on their relevant queries in some way to improve the synthetic data?
