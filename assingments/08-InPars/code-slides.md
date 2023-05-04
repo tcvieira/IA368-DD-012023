@@ -85,7 +85,10 @@ style: |
 # 1. Steps
 
 1. Positive query generation via GPT-3.5-Turbo ✅
+   - zero-shot using 1k sampled docs with seed 20
+   - **prompt**: *Generate a short and objective query in the way a human user would in search engines (based on trec-covid dataset) that would help him find more information about the main topic on the following document:*
 2. Negative query generation via BM25 ✅
+    - for each query obtained via GPT-3.5-Turbo (previous step), the top 1k documents were retrieved via BM25, and then 5 retrieved docs were random chosen to compose the collection of negative documents.
 3. Binary Classifier Training 😵
 4. Two-phase Re-Ranking: BM25 + ranking of relevant documents via the score of the classifier trained in step 3. 😵
 
