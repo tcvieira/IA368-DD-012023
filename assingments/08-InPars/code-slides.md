@@ -82,14 +82,25 @@ style: |
 ---
 <!-- paginate: true -->
 
-# 1. Concepts
+# 1. Steps
+
+1. Positive query generation via GPT-3.5-Turbo ✅
+2. Negative query generation via BM25 ✅
+3. Binary Classifier Training 😵
+4. Two-phase Re-Ranking: BM25 + ranking of relevant documents via the score of the classifier trained in step 3. 😵
+
+<smal>Note: The symbols ✅ and 😵 are used to indicate completion and incomplete tasks, respectively.</small>
+
+---
+
+# 2. Concepts
 
 - Augmented data (queries) using LLMs
   - prompt engineering
 - Fine-tune using synthetic data (queries)
 
 ---
-# 2. Tricks
+# 3. Tricks
 
 - used `getpass()` (didn't know) or simple `input` for keys
 - LangChain FTW! ✌️
@@ -103,15 +114,16 @@ style: |
 
 ---
 
-# 3. Interesting/Unexpected
+# 4. Interesting/Unexpected
 
 - chatgpt was unable to generate good code snippets for langchain since it doesn't know about it
 - low cost with gpt-3 💰
 - prompt tuning 🔧
+- **Borela** - interesting analysis on presentation
 
 ---
 
-# 3.1. Prompt
+# 4.1. Prompt
 
 **prompt:** `Generate a short and objective query in the way a human user would in search engines (based on trec-covid dataset) that would help him find more information about the main topic on the following document:`
 
@@ -125,6 +137,6 @@ style: |
 
 ---
 
-# 4. A "basic" doubt that you or your colleagues may have
+# 5. A "basic" doubt that you or your colleagues may have
 
 - is it a good idea to filter documents based on their relevant queries in some way to improve the synthetic data?
