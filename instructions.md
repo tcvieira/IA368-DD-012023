@@ -1,23 +1,23 @@
-# Instruções
+# Instructions
 
-## Código/Notebook
+## Code/Notebook
 
-A apresentação deve cobrir pelo menos 3 dos 7 itens abaixo:
+The presentation should cover at least 3 of the 7 items below:
 
-1. Explicação de conceitos importantes do exercício feito
-2. Técnicas para garantir que a implementação está correta
-3. Truques de código que funcionaram
-4. Problemas e soluções no desenvolvimento
-5. Resultados interessantes/inesperados
-6. Uma dúvida "básica" que você ou os colegas possam ter
-7. Um tópico "avançado" para discutirmos
+1. Explanation of important concepts in the exercise
+2. Techniques to ensure the implementation is correct
+3. Code tricks that worked
+4. Problems and solutions in development
+5. Interesting/unexpected results
+6. A "basic" doubt that you or your colleagues may have
+7. An "advanced" topic for us to discuss
 
-## Leitura
+## Reading
 
-A apresentação deve cobrir pelo menos 2 dos 5 itens abaixo:
+The presentation should cover at least 2 of the 5 items below:
 
- 1. Explicação de conceitos importantes do artigo
- 2. A contribuição do artigo
- 3. Resultados interessantes/inesperados
- 4. Uma dúvida "básica" que você ou os colegas possam ter
- 5. Um tópico "avançado" para discutirmos
+1. Explanation of important concepts in the article
+2. The article's contribution
+3. Interesting/unexpected results
+4. A "basic" doubt that you or your colleagues may have
+5. An "advanced" topic for us to discuss
