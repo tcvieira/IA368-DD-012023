@@ -2,7 +2,7 @@
 
 ## Code
 
-[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/08-InPars/notebook.ipynb)
+[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/09-ColBERT/notebook.ipynb)
 
 [notebook](notebook.ipynb)
 
@@ -12,7 +12,7 @@
 
 ## Reading
 
-[InPars: Data Augmentation for Information Retrieval using Large Language Models](https://arxiv.org/pdf/2202.05144.pdf)
+[ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://arxiv.org/pdf/2112.01488.pdf)
 
 [article slides pdf](article-slides.pdf)
 
