@@ -2,9 +2,11 @@
 
 ## ColBERTv2
 
-- 
-- Future works
+- from Pretrained Transformers for Text Ranking: BERT and Beyond
+  - Per-Token Representations and Late Interactions: ColBERT
+    - 
   
 - interesting
+  - dataset LoTTe
 
 ## Refs
