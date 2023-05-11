@@ -93,8 +93,9 @@ style: |
 - **ColBERTv1**
   - late interaction as a neural ranking paradigm
   - dense vector representation for each token
-  - exact match vs soft match
-  - promote exact match where it is more relevant to IR
+  - discussions on exact match vs soft match
+  - hypotesis over it promotes exact match where it is more relevant to IR
+  - can be use as reranker or end2end top-k retriever
 - **single-vector** - a pretrained language model is used to encode each query and each document into a single high-dimensional vector, and relevance is modeled as a simple dot product between both vectors
 - **multi-vector**
   - for a query/doc $q$ encoder outputs a matrix $nxD$, not a vector
@@ -143,20 +144,25 @@ $$s_{q, d}=\sum_{i \in \eta(q)} \max _{j \in \eta(d)} \eta(q)_i \cdot \eta(d)_j$
 # 1.7 how it works
 
 - ColBERTv2
-  - "two-stage" retrieval method
-    - preprocess representation of each token from the corpus is computed and indexed (FAISS - ColBERTv1 and ) for nearest neighbor search
+    - starting from a index of vectors from the corpus created as ColBERTv1
+    - `training the retriever`
+      - for each training query, the top-k passages are retrieved and feed each of those query–passage pairs into a cross-encoder reranker
+      - use miniLM cross-encoder with distillation to train the reranker
+      - after training refresh the index
+    - `centroid index`
+      - preprocess representation of each token from the corpus, `cluster them and use the term nearest centroids ids + a residual vector as its representation (smaller size)`
     - on query time
-      - use each query term vector to retrieve top-k texts from corpus from the index
-      - these top-k texts are scored against all query tokens vectors usin *MaxSim*
+      - use each query term vector to retrieve the `nearest centroids from the inverted index` of texts from corpus
+      - these top-k texts are scored against all query tokens vectors using *MaxSim*
 
 ---
 
 # 2.1 contributions
 
-- improvements on ColBERTv2
+- improvements on ColBERTv2 are mostly implementation
   - residual compression approach significantly reduces index sizes using cluster centroids over the token level vectors space
-  - better negative selection (*hard-negative mining*)
-  - adds distillation from a cross-encoder system over the ...
+  - better negative selection (*hard-negative mining*) - in-batch
+  - adds knowledge distillation from a cross-encoder miniLM for rerank the initial top-k docs/texts
   - ColBERTv1
     - 128dim vectors with 2 bytes = 256 bytes/vector
   - ColBERTv2
@@ -202,5 +208,7 @@ $$s_{q, d}=\sum_{i \in \eta(q)} \max _{j \in \eta(d)} \eta(q)_i \cdot \eta(d)_j$
 ---
 # 5. advanced topics
 
-- ColBERTv3 ?
-- PLAID ?
+- how to make single vector methods works like ColBERT multi vector where it successed and vice-versa ?
+- [PLAID: An Efficient Engine for Late Interaction Retrieval](https://arxiv.org/abs/2205.09707) same authors
+
+</small>[Zeta Alpha Vector - ColBERT + ColBERTv2: late interaction at a reasonable inference cost](https://www.youtube.com/embed/1hDK7gZbJqQ)</small>
