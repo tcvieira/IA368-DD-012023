@@ -180,6 +180,8 @@ $$s_{q, d}=\sum_{i \in \eta(q)} \max _{j \in \eta(d)} \eta(q)_i \cdot \eta(d)_j$
 - success@5 metric
 - LoTTE dataset
 
+---
+
 # 3.1 interesting/unexpected results
 
 - **exact and soft match** - ColBERT can distinguish terms of which exact match is important
