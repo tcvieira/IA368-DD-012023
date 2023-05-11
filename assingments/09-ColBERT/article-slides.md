@@ -76,7 +76,7 @@ style: |
 
 # [ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://arxiv.org/pdf/2112.01488.pdf)
 
-## Thiago Coelho Vieira
+## Thiago Coelho Vieira - thiagotcvieira@gmail.com
 ---
 <!-- paginate: true -->
 
@@ -90,21 +90,41 @@ style: |
 
 # 1.1 Main Concepts
 
-- late interaction
-- MaxSim - largest cosine similarity between each query token embedding and all passage token embeddings.
-- multi-vector representation
+- **ColBERTv1**
+  - dense vector representation for each token
+  - "ranking methods based on dense representations can achieve effectiveness that are competitive with a cross-encoder at a fraction of query latency"
+  - **exact and soft match** - ColBERT can distinguish terms of which exact match is important
+    - for each term check average score in exact and soft cases (how?), if the difference is higher then favors exact match otherwise favors soft match
+  - exact match is 
+- **single-vector** - a pretrained language model is used to encode each query and each document into a single high-dimensional vector, and relevance is modeled as a simple dot product between both vectors
+- **multi-vector**
+  - for a query/doc $q$ encoder outputs a matrix $nxD$, not a vector
 
 ---
 
-# 1.2 Interactions
+# 1.2 ColBERTv1
 
+![w:700 h:500 center](colbertv1.jpg)
+
+---
+
+# 1.3 Interactions
+
+
+---
+
+# 1.2 MaxSim
+
+- similarity score
+- largest cosine similarity between each query token matrix and all passages token matrix.
+- > Since each of these vectors has unit length, the similarity is the sum of maximum cosine similarities between each query term and the “best” matching term contained in the text from the corpus
 
 ---
 
 # 2.1 Contribution
 
 - improvements on ColBERTv1
-  - dense vectors compressions + better negative selection
+  - dense vectors compressions (*destillation*) + better negative selection (*hard-negative mining*)
   - ColBERTv1
     - 128dim vectors with 2 bytes = 256 bytes/vector
   - ColBERTv2
@@ -118,7 +138,8 @@ style: |
 # 2.2 How it works
 
 - **Training**
-  - add
+  - uses same BERT model to encode queries $q$ and docs/texts $d$
+  - prepended queries with special token $[Q]$ and docs/texts with $[D]$
 - **Dimensionality Reduction - Product Quantization**
   - high dim vectors splitted in same size smaller vectors
   - each sub-vector is associated with the nearest centroid on vector space
@@ -145,6 +166,9 @@ style: |
 - LoTTE dataset
 
 ---
-# 4. Basic Doubts
+# 4. basic doubts
 
-- long-tail topics (ask gpt)
+- *long-tail topics* - `out of domain topics?`
+- on ColBERTv1
+  - the vector representation of each token is normalized to a unitary L2 norm; this makes computing inner products equivalent to computing cosine similarity.
+  - relevance score is the sum of the max similarity between each vector of the query $q$ and all doc $d$ vectors
