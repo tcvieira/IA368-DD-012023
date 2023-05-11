@@ -88,17 +88,17 @@ style: |
 4. ~~basic doubts~~
 5. ~~advanced topics for discussion~~ -->
 
-# 1.1 Main Concepts
+# 1.1 main concepts
 
 - **ColBERTv1**
+  - late interaction as a neural ranking paradigm
   - dense vector representation for each token
-  - "ranking methods based on dense representations can achieve effectiveness that are competitive with a cross-encoder at a fraction of query latency"
-  - **exact and soft match** - ColBERT can distinguish terms of which exact match is important
-    - for each term check average score in exact and soft cases (how?), if the difference is higher then favors exact match otherwise favors soft match
-  - exact match is 
+  - exact match vs soft match
+  - promote exact match where it is more relevant to IR
 - **single-vector** - a pretrained language model is used to encode each query and each document into a single high-dimensional vector, and relevance is modeled as a simple dot product between both vectors
 - **multi-vector**
   - for a query/doc $q$ encoder outputs a matrix $nxD$, not a vector
+- **trade-off** the cost of neural inference for reranking (GPUs) against the cost of large amounts of memory to support efficient nearest neighbor search
 
 ---
 
@@ -110,21 +110,53 @@ style: |
 
 # 1.3 Interactions
 
+![w:1000 h:400 center](interactions.png)
 
 ---
 
-# 1.2 MaxSim
+# 1.4 MaxSim - similarity score
 
-- similarity score
+$$s_{q, d}=\sum_{i \in \eta(q)} \max _{j \in \eta(d)} \eta(q)_i \cdot \eta(d)_j$$
+
 - largest cosine similarity between each query token matrix and all passages token matrix.
-- > Since each of these vectors has unit length, the similarity is the sum of maximum cosine similarities between each query term and the “best” matching term contained in the text from the corpus
+
+> constructs a similarity matrix, performs max pooling along the query dimension, followed by a summation to arrive at the relevance score
+> 
+
+---
+# 1.5 how it works
+
+- ColBERTv1
+  - "two-stage" retrieval method
+    - preprocess representation of each token from the corpus is computed and indexed (FAISS) for nearest neighbor search
+    - on query time
+      - use each query term vector to retrieve top-k texts from corpus using the index (maximizin in a single query term)
+      - these top-k texts for each term query are scored against all query tokens vectors using *MaxSim* for reranking
+---
+
+# 1.6 ColBERTv2
+
+![w:700 h:500 center](colbertv2.png)
 
 ---
 
-# 2.1 Contribution
+# 1.7 how it works
 
-- improvements on ColBERTv1
-  - dense vectors compressions (*destillation*) + better negative selection (*hard-negative mining*)
+- ColBERTv2
+  - "two-stage" retrieval method
+    - preprocess representation of each token from the corpus is computed and indexed (FAISS - ColBERTv1 and ) for nearest neighbor search
+    - on query time
+      - use each query term vector to retrieve top-k texts from corpus from the index
+      - these top-k texts are scored against all query tokens vectors usin *MaxSim*
+
+---
+
+# 2.1 contributions
+
+- improvements on ColBERTv2
+  - residual compression approach significantly reduces index sizes using cluster centroids over the token level vectors space
+  - better negative selection (*hard-negative mining*)
+  - adds distillation from a cross-encoder system over the ...
   - ColBERTv1
     - 128dim vectors with 2 bytes = 256 bytes/vector
   - ColBERTv2
@@ -135,24 +167,7 @@ style: |
 - new dataset *LoTTE (Long-Tail Topic-stratified Evaluation)*
 ---
 
-# 2.2 How it works
-
-- **Training**
-  - uses same BERT model to encode queries $q$ and docs/texts $d$
-  - prepended queries with special token $[Q]$ and docs/texts with $[D]$
-- **Dimensionality Reduction - Product Quantization**
-  - high dim vectors splitted in same size smaller vectors
-  - each sub-vector is associated with the nearest centroid on vector space
-  - replace the values of the centroids by the unique ids
-  - outputs a vector of unique ids for each centroid
-- **Inverted Index**
-  - centroids ids
-- **Search**
-  - At search time, the query $q$ is encoded into a multi-vector representation and its similarity to a passage $d$ is computed as the summation of query-side *MaxSim* operations.
-
----
-
-# 3. interesting/unexpected results
+# 2.2 contributions
 
 - in-domain
   - beats $DPR$ and $SPLADEv2$
@@ -165,6 +180,15 @@ style: |
 - success@5 metric
 - LoTTE dataset
 
+# 3.1 interesting/unexpected results
+
+- **exact and soft match** - ColBERT can distinguish terms of which exact match is important
+  - for each term check average score in exact and soft cases (how?), if the difference is higher then favors exact match otherwise favors soft match
+- **how promote exact match from contextualized embeddings?**
+  - hyp: frequent words have contextualized embedding pointing to different directions
+    - for important terms, contextual embeddings vary less, thus ColBERT will tend to select same term in docs (*consine sim close to 1*)
+    - terms carrying  less information (is, the, as...) tend to absorb more the context in sequences, thus their embeddings vary more
+
 ---
 # 4. basic doubts
 
@@ -172,3 +196,9 @@ style: |
 - on ColBERTv1
   - the vector representation of each token is normalized to a unitary L2 norm; this makes computing inner products equivalent to computing cosine similarity.
   - relevance score is the sum of the max similarity between each vector of the query $q$ and all doc $d$ vectors
+
+---
+# 5. advanced topics
+
+- ColBERTv3 ?
+- PLAID ?
