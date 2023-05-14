@@ -115,7 +115,7 @@ style: |
 
 - GPT-3 to use a text-based web-browser trained on 6000 **demonstrations** and 21500 **comparisons** and 4 different training methods (BC, RM, RL and best-of-$n$)
 - the model is provided with an open-ended question and a summary of the browser state and must issue commands (search, find in page, quote, scroll...)
-- the model collects passages from web pages, and then uses these to compose an answer
+- retrieved text from hits are used to compose a crafted (text-based web-browser state) prompt for *GPT-3* produce the answers with the citations
 - trained a reward model to predict human preferences, and optimizing against it using either reinforcement learning or rejection sampling (*demonstrations* and *comparisons*)
 
 ![bg right:45% 95%](training.png)
@@ -125,7 +125,6 @@ style: |
 # 3.1 interesting/unexpected results
 
 - **WebGPT**
-  - retrieved text from hits are used to compose a crafted (text-based web-browser state) prompt for *GPT-3* produce the answers with the citations
   - retrieve 64 hits (Bing)
   - fine tuned *GPT-3* 760M, 13B and 175B
   - post-processing dataset, demonstration interface, comparison denoising (appendixes)
