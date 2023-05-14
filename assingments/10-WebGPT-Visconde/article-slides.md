@@ -115,8 +115,7 @@ style: |
 
 - GPT-3 to use a text-based web-browser trained on 6000 **demonstrations** and 21500 **comparisons** and 4 different training methods (BC, RM, RL and best-of-$n$)
 - the model is provided with an open-ended question and a summary of the browser state and must issue commands (search, find in page, quote, scroll...)
-- retrieved text from hits are used to compose a crafted (text-based web-browser state) prompt for *GPT-3* produce the answers with the citations
-- trained a reward model to predict human preferences, and optimizing against it using either reinforcement learning or rejection sampling (*demonstrations* and *comparisons*)
+- trained a reward model to predict human preferences, and optimizing against it using either reinforcement learning (based on reward model) or rejection sampling (reranking)
 
 ![bg right:45% 95%](training.png)
 
