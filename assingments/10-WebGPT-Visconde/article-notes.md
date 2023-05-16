@@ -7,4 +7,6 @@
 
 ## [Visconde: Multi-document QA with GPT-3 and Neural Reranking](https://arxiv.org/pdf/2212.09656.pdf)
 
+- https://twitter.com/UmCatolico/status/1605547781581438977
+
 ## Refs
