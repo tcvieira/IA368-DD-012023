@@ -17,7 +17,7 @@
 > Fazer uma implementação que suporta buscar eficientemente milhões de documentos.
 > Não se pode usar bibliotecas como sklearn, que já implementam o BoW e TF-IDF.
 
-[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/01/notebook.ipynb)
+[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/01-BM25-TFIDF-BooleanSearch/notebook.ipynb)
 
 > **TODO** mentions were added throughout the notebook to indicate some point of lack of understanding or improvements
 >
