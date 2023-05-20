@@ -21,7 +21,7 @@ Análise de sentimentos (dataset IMDB) usando um modelo estilo BERT: https://col
 **Sugestão**: fazer overfit em um batch: treinar por 200 epocas um unico batch, e ver se consegue loss=0, e accuracia=100%, ou ndcg=1
 
 
-[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/02/notebook.ipynb)
+[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/02-BERT/notebook.ipynb)
 
 ## Reading
 
