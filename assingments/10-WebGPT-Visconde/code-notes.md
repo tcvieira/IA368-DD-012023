@@ -12,6 +12,13 @@ Implementar um pipeline multidoc QA: dado uma pergunta do usuário, buscamos em 
 Dicas:
 Se inspirar no pipeline do Visconde: https://github.com/neuralmind-ai/visconde
 
+## Slack
+
+>Essa chave "text" é o texto principal no qual o anotador se baseou para compor a pergunta. Assim, é necessário indexar ele também, uma vez que ele deve conter informações relevantes para responder às perguntas.
+>
+>O campo "context" contem os contextos ground-truth que contém (ou não no caso de perguntas sem resposta) as informações necessárias para responder à pergunta. Você vai ver que em algum casos o campo passage está com o valor main . Isso significa que aquele trecho específico foi retirado do texto principal usado para compor a pergunta.
+
 ## Refs
 
+- IIRC dataset - https://aclanthology.org/2020.emnlp-main.86/
 - https://slideslive.com/38939237/iirc-a-dataset-of-incomplete-information-reading-comprehension-questions
