@@ -2,7 +2,7 @@
 
 ## Code
 
-[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/06/notebook.ipynb)
+[![google colab link](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tcvieira/IA368-DD-012023/blob/main/assingments/06-Dense-Vectors-DPR/notebook.ipynb)
 
 [notebook](notebook.ipynb)
 
