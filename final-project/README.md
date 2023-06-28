@@ -59,7 +59,7 @@ One way to improve training is to choose really good negatives, also know as har
 - train bertimbau on mmarco-pt - https://github.com/unicamp-dl/mMARCO/blob/main/scripts/train_minilm.py
 - select which approach will be used
   - from naver/splade - forked https://github.com/tcvieira/splade
-    - SPLADE v2 modify the pooling mechanism and introduce models trained with distillation 
+    - SPLADE v2 modify the pooling mechanism and introduce models trained with distillation
     - create config files for experiments and train
 - initially finetune + evaluate
 - then pretrain + evaluate
@@ -80,6 +80,16 @@ sebastian-hofstaetter/neural-ranking-kd) [3].
 - se vai indexar os documentos todos ou as passagens, ou documento truncado (perco informacao). indexar com passagem tem mais informação
 - treinar somente 10 epochs (~10% dos dados msmarco pt das 40M de linhas) no qrels nas primeiras 4M do dataset pq o q varia é o negativo amostrado do bm25
 - testa primeiro só com o dataset pt...e depois vê se usa o ingles (pq tem q usar de outro jeito pra pegar os negativos)
+
+
+### 15/06
+  - inicia com triplets 1M - 4M (final)
+  - sobe todo triplets em memória...reduzir triplets
+  - batch 16 - 32 (final)
+  - testar IterableDataset (modificando o código) https://huggingface.co/docs/datasets/about_mapstyle_vs_iterable
+    - ajustar o dataset pra n pegar aleatorio...ver o que a mirelle fez
+### 22/06
+  - para usar 39M poderia usar o train.ids.small.tsv + o split_triples do inpars pra gerar as triplas dinamicamente. 
 
 ## Refs
 
